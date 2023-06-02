@@ -1,0 +1,28 @@
+.banner {
+    min-height: 65vh; 
+    background-image: url('../../../assets/images/banner.png');
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.logo-content nav {
+    background-color: rgba(240, 248, 255, 0)!important;
+    top: 3rem
+}
+
+.logo-content nav .container-fluid {
+    margin-left: 5rem;
+}
+
+.subtitle {
+    margin-left: 1rem;
+}
+
+.subtitle h1 strong {
+    font-size: xxx-large;
+}
+
+.filter ul li a {
+    color: #172640;
+}
