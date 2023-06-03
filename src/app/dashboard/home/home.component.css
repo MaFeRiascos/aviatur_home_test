@@ -8,7 +8,7 @@
 
 .logo-content nav {
     background-color: rgba(240, 248, 255, 0)!important;
-    top: 3rem
+    top: -3rem
 }
 
 .logo-content nav .container-fluid {
@@ -20,9 +20,31 @@
 }
 
 .subtitle h1 strong {
-    font-size: xxx-large;
+    font-size: 5rem;
+}
+
+.filter {
+    margin-top: -5rem;
+    margin-left: 5rem;
 }
 
 .filter ul li a {
     color: #172640;
+}
+
+.search-btn {
+    background-color: #2578cd;
+    border-color: #2578cd;
+    width: 15rem;
+}
+
+.section-content {
+    width: 90%;
+}
+
+.indicator {
+    background-color: white;
+    width: 5rem;
+    border-radius: 2px;
+    text-align: center;
 }

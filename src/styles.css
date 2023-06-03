@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+.slick-prev, 
+.slick-next {
+    height: 5rem !important;
+    width: 5rem !important;
+    color: #000000 !important;
+    z-index: 100;
+    opacity: 1;
+}
+
+.slick-prev::before, 
+.slick-next::before {
+    height: 5rem !important;
+    width: 5rem !important;
+    color: #131313 !important;
+    z-index: 100;
+    opacity: 1;
+}
+
+.slick-slider {
+    width: 88%;
+    margin: auto;
+    background: rgba(243, 243, 243, 0);
+}

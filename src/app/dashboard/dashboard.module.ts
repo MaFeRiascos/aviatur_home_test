@@ -11,6 +11,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 //Modules
 import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
+    SlickCarouselModule,
     HttpClientModule
   ],
   providers: [],

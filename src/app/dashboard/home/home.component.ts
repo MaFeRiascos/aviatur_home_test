@@ -1,7 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-
-import { properties, finder, agent, pager } from './home.model';
-import { propertiesData, finderData, agentData, pagerData } from './data';
+import { Component, OnInit } from '@angular/core';
+import { Service } from './service/service.service';
+import { contentData } from './data'
 
 @Component({
   selector: 'app-home',
@@ -9,53 +8,48 @@ import { propertiesData, finderData, agentData, pagerData } from './data';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  propertiesData!: properties[];
-  finderData!: finder[];
-  agentData!: agent[];
-  pagerData!: pager[];
 
+  cities: any;
+  content: any;
 
-  ngOnInit(): void {}
+  content1: any;
 
-  // Chat Data Fetch
-  private _fetchData() {
-    this.propertiesData = propertiesData;
-    this.finderData = finderData;
-    this.agentData = agentData;
-    this.pagerData = pagerData;
+  constructor(
+    public service: Service
+  ){}
+
+  ngOnInit(): void {
+    this.service.getCities().subscribe((data) => {
+      this.cities = data;
+    });
+
+    this.service.getContent().subscribe((data) => {
+      this.content = data;
+    });
+
+    this.content1 = contentData;
   }
 
-  /**
-   * Swiper setting
-  */
-  config = {
-    initialSlide: 0,
-    slidesPerView: 1,
-    navigation: true
+  slideConfig = {
+    "slidesToShow": 3,
+    "slidesToScroll": 1,
+    "dots": true,
+    "infinite": false
   };
-
-  /**
-   * Top properties on Finder
-  */
-  Finder = {
-    initialSlide: 0,
-    slidesPerView: 1,
-    navigation: true,
-    breakpoints:{
-      768:{
-        slidesPerView: 2,
-      },
-      1200:{
-        slidesPerView: 2,
-      }
-    }
-  };
-
-  /**
-   * Open modal
-   * @param content modal content
-  */
-  openModal(content: any) {
-    console.log("open");
+  
+  slickInit(e:any) {
+    console.log('slick initialized');
+  }
+    
+  breakpoint(e:any) {
+    console.log('breakpoint');
+  }
+    
+  afterChange(e:any) {
+    console.log('afterChange');
+  }
+    
+  beforeChange(e:any) {
+    console.log('beforeChange');
   }
 }
